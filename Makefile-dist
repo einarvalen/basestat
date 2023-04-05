@@ -8,9 +8,9 @@ WLS_TEST=`exainfo -role weblogic-basestat-test-server`
 WLS_PROD=`exainfo -role weblogic-basestat-prod-server`
 WLS_PROD_PDADM=`exainfo -role weblogic-basestat-pdadm-prod-server`
 WLS_UTV=`exainfo -role weblogic-utv-server`
-TVEGLOGGEN=zqxtvegloggen01 zqxtvegloggen02 zqxtvegloggen03 zqxtvegloggen04
-PVEGLOGGEN=zqxpvegloggen01 zqxpvegloggen02 zqxpvegloggen03 zqxpvegloggen04
-KVEGLOGGEN=zqxpveglkurs01 zqxpveglkurs02
+TQLOG=zqxtqweloggen01 zqxtqweloggen02 zqxtqweloggen03 zqxtqweloggen04
+PQLOG=zqxpqweloggen01 zqxpqweloggen02 zqxpqweloggen03 zqxpqweloggen04
+KQLOG=zqxpqwelkurs01 zqxpqwelkurs02
 
 TOMCAT=`exainfo -role tomcat-server`
 
@@ -30,6 +30,6 @@ wls-utv:
 tomcat:
 	for a in $(TOMCAT); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat pdadm@$$a:/usr/local/plattform/sadm/bin; done
 
-vegloggen:
-	for a in $(TVEGLOGGEN) $(PVEGLOGGEN) $(KVEGLOGGEN); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat pdadm@$$a:/usr/local/plattform/sadm/bin; done
+qweloggen:
+	for a in $(TQLOG) $(PQLOG) $(KQLOG); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat pdadm@$$a:/usr/local/plattform/sadm/bin; done
 

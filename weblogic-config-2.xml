@@ -34,35 +34,35 @@
     <listen-address></listen-address>
   </server>
   <server>
-    <name>server-vegloggen-01</name>
+    <name>server-qweloggen-01</name>
     <machine>machine-zqxujapp21</machine>
     <listen-port>7560</listen-port>
-    <cluster>cluster-vegloggen-01</cluster>
+    <cluster>cluster-qweloggen-01</cluster>
     <listen-address>zqxujapp21</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegloggen/</arguments>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/qweloggen/monitoring/qweloggen/</arguments>
     </server-start>
     <jta-migratable-target>
-      <name>server-vegloggen-01</name>
-      <user-preferred-server>server-vegloggen-01</user-preferred-server>
-      <cluster>cluster-vegloggen-01</cluster>
+      <name>server-qweloggen-01</name>
+      <user-preferred-server>server-qweloggen-01</user-preferred-server>
+      <cluster>cluster-qweloggen-01</cluster>
     </jta-migratable-target>
   </server>
   <server>
-    <name>server-vegloggen-02</name>
+    <name>server-qweloggen-02</name>
     <machine>machine-zqxujapp22</machine>
     <listen-port>7560</listen-port>
-    <cluster>cluster-vegloggen-01</cluster>
+    <cluster>cluster-qweloggen-01</cluster>
     <listen-address>zqxujapp22</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegloggen/</arguments>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/qweloggen/monitoring/qweloggen/</arguments>
     </server-start>
     <jta-migratable-target>
-      <name>server-vegloggen-02</name>
-      <user-preferred-server>server-vegloggen-02</user-preferred-server>
-      <cluster>cluster-vegloggen-01</cluster>
+      <name>server-qweloggen-02</name>
+      <user-preferred-server>server-qweloggen-02</user-preferred-server>
+      <cluster>cluster-qweloggen-01</cluster>
     </jta-migratable-target>
   </server>
   <server>
@@ -73,7 +73,7 @@
     <listen-address>zqxujapp21</listen-address>
     <server-start>
       <class-path>/data/nvms/properties/</class-path>
-      <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/lokasjon/</arguments>
+      <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/qweloggen/monitoring/lokasjon/</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nvmsloc-01</name>
@@ -89,7 +89,7 @@
     <listen-address>zqxujapp22</listen-address>
     <server-start>
       <class-path>/data/nvms/properties/</class-path>
-      <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/lokasjon/</arguments>
+      <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/qweloggen/monitoring/lokasjon/</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nvmsloc-02</name>
@@ -104,7 +104,7 @@
     <cluster>cluster-nvmsroute-01</cluster>
     <listen-address>zqxujapp21</listen-address>
     <server-start>
-      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=zqxdev -Dschema=active</arguments>
+      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/qweloggen-rute.properties -Dnvms.loc.prop=zqxdev -Dschema=active</arguments>
       <username>weblogic</username>
       <password-encrypted>{AES}z9mExhyLHY/m7vHQ7bMF5Lszb4ghF+WfwhufhyiwzEg=</password-encrypted>
     </server-start>
@@ -121,7 +121,7 @@
     <cluster>cluster-nvmsroute-01</cluster>
     <listen-address>zqxujapp22</listen-address>
     <server-start>
-      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=zqxdev -Dschema=active</arguments>
+      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/qweloggen-rute.properties -Dnvms.loc.prop=zqxdev -Dschema=active</arguments>
       <username>weblogic</username>
       <password-encrypted>{AES}/0doZK3cMbQro7RG81buoTT4+h6j3c3rLbS7H+hNPu4=</password-encrypted>
     </server-start>
@@ -132,7 +132,7 @@
     </jta-migratable-target>
   </server>
   <server>
-    <name>server-vegloggenkart-01</name>
+    <name>server-qweloggenkart-01</name>
     <ssl>
       <hostname-verifier xsi:nil="true"></hostname-verifier>
       <hostname-verification-ignored>false</hostname-verification-ignored>
@@ -142,21 +142,21 @@
     </ssl>
     <machine>machine-zqxujapp21</machine>
     <listen-port>7490</listen-port>
-    <cluster>cluster-vegloggenkart-01</cluster>
+    <cluster>cluster-qweloggenkart-01</cluster>
     <listen-address>zqxujapp21</listen-address>
     <server-start>
-      <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/vegloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
+      <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/qweloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
       <username>weblogic</username>
       <password-encrypted>{AES}/P4vClv9PKCKGe3qBn619oykTYZFtQbEwYLg9mwTMs0=</password-encrypted>
     </server-start>
     <jta-migratable-target>
-      <name>server-vegloggenkart-01</name>
-      <user-preferred-server>server-vegloggenkart-01</user-preferred-server>
-      <cluster>cluster-vegloggenkart-01</cluster>
+      <name>server-qweloggenkart-01</name>
+      <user-preferred-server>server-qweloggenkart-01</user-preferred-server>
+      <cluster>cluster-qweloggenkart-01</cluster>
     </jta-migratable-target>
   </server>
   <server>
-    <name>server-vegloggenkart-02</name>
+    <name>server-qweloggenkart-02</name>
     <ssl>
       <hostname-verifier xsi:nil="true"></hostname-verifier>
       <hostname-verification-ignored>false</hostname-verification-ignored>
@@ -166,17 +166,17 @@
     </ssl>
     <machine>machine-zqxujapp22</machine>
     <listen-port>7490</listen-port>
-    <cluster>cluster-vegloggenkart-01</cluster>
+    <cluster>cluster-qweloggenkart-01</cluster>
     <listen-address>zqxujapp22</listen-address>
     <server-start>
-      <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/vegloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
+      <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/qweloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
       <username>weblogic</username>
       <password-encrypted>{AES}hSdLVLqMuSQLVUKRyUTgxl9ZWH3IBnWvYuL/fSEYCMU=</password-encrypted>
     </server-start>
     <jta-migratable-target>
-      <name>server-vegloggenkart-02</name>
-      <user-preferred-server>server-vegloggenkart-02</user-preferred-server>
-      <cluster>cluster-vegloggenkart-01</cluster>
+      <name>server-qweloggenkart-02</name>
+      <user-preferred-server>server-qweloggenkart-02</user-preferred-server>
+      <cluster>cluster-qweloggenkart-01</cluster>
     </jta-migratable-target>
   </server>
   <server>
@@ -187,7 +187,7 @@
     <listen-address>zqxujapp23</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/statistikk/</arguments>
+      <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/qweloggen/monitoring/statistikk/</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nvmsstatistikk-01</name>
@@ -203,7 +203,7 @@
     <listen-address>zqxujapp24</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/statistikk/</arguments>
+      <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/qweloggen/monitoring/statistikk/</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nvmsstatistikk-02</name>
@@ -212,10 +212,10 @@
     </jta-migratable-target>
   </server>
   <server>
-    <name>server-vegmelding-01</name>
+    <name>server-qwemelding-01</name>
     <machine>machine-zqxujapp23</machine>
     <listen-port>7540</listen-port>
-    <cluster>cluster-vegmelding-01</cluster>
+    <cluster>cluster-qwemelding-01</cluster>
     <web-server>
       <web-server-log>
         <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(zqxguid)</elf-fields>
@@ -225,19 +225,19 @@
     <listen-address>zqxujapp23</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegmelding/</arguments>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/qweloggen/monitoring/qwemelding/</arguments>
     </server-start>
     <jta-migratable-target>
-      <name>server-vegmelding-01</name>
-      <user-preferred-server>server-vegmelding-01</user-preferred-server>
-      <cluster>cluster-vegmelding-01</cluster>
+      <name>server-qwemelding-01</name>
+      <user-preferred-server>server-qwemelding-01</user-preferred-server>
+      <cluster>cluster-qwemelding-01</cluster>
     </jta-migratable-target>
   </server>
   <server>
-    <name>server-vegmelding-02</name>
+    <name>server-qwemelding-02</name>
     <machine>machine-zqxujapp24</machine>
     <listen-port>7540</listen-port>
-    <cluster>cluster-vegmelding-01</cluster>
+    <cluster>cluster-qwemelding-01</cluster>
     <web-server>
       <web-server-log>
         <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(zqxguid)</elf-fields>
@@ -247,12 +247,12 @@
     <listen-address>zqxujapp24</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegmelding/</arguments>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/qweloggen/monitoring/qwemelding/</arguments>
     </server-start>
     <jta-migratable-target>
-      <name>server-vegmelding-02</name>
-      <user-preferred-server>server-vegmelding-02</user-preferred-server>
-      <cluster>cluster-vegmelding-01</cluster>
+      <name>server-qwemelding-02</name>
+      <user-preferred-server>server-qwemelding-02</user-preferred-server>
+      <cluster>cluster-qwemelding-01</cluster>
     </jta-migratable-target>
   </server>
   <server>
@@ -263,7 +263,7 @@
     <listen-address>zqxujapp23</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/datex/</arguments>
+      <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/qweloggen/monitoring/datex/</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nvmsdatex-01</name>
@@ -279,7 +279,7 @@
     <listen-address>zqxujapp24</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
-      <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/datex/</arguments>
+      <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/qweloggen/monitoring/datex/</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nvmsdatex-02</name>
@@ -288,7 +288,7 @@
     </jta-migratable-target>
   </server>
   <cluster>
-    <name>cluster-vegloggen-01</name>
+    <name>cluster-qweloggen-01</name>
     <cluster-messaging-mode>unicast</cluster-messaging-mode>
   </cluster>
   <cluster>
@@ -306,7 +306,7 @@
     <cluster-messaging-mode>unicast</cluster-messaging-mode>
   </cluster>
   <cluster>
-    <name>cluster-vegloggenkart-01</name>
+    <name>cluster-qweloggenkart-01</name>
     <cluster-messaging-mode>unicast</cluster-messaging-mode>
   </cluster>
   <cluster>
@@ -314,7 +314,7 @@
     <cluster-messaging-mode>unicast</cluster-messaging-mode>
   </cluster>
   <cluster>
-    <name>cluster-vegmelding-01</name>
+    <name>cluster-qwemelding-01</name>
     <cluster-messaging-mode>unicast</cluster-messaging-mode>
   </cluster>
   <cluster>
@@ -328,58 +328,58 @@
   </embedded-ldap>
   <configuration-version>10.3.4.0</configuration-version>
   <app-deployment>
-    <name>vegloggen-lokasjon-36</name>
+    <name>qweloggen-lokasjon-36</name>
     <target>cluster-nvmsloc-01</target>
     <module-type>ear</module-type>
-    <source-path>servers/AdminServer7027/upload/vegloggen-lokasjon-36.1.51.ear</source-path>
+    <source-path>servers/AdminServer7027/upload/qweloggen-lokasjon-36.1.51.ear</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
   <app-deployment>
-    <name>vegloggen-vegloggen-36</name>
-    <target>cluster-vegloggen-01</target>
+    <name>qweloggen-qweloggen-36</name>
+    <target>cluster-qweloggen-01</target>
     <module-type>ear</module-type>
-    <source-path>servers/AdminServer7027/upload/vegloggen-vegloggen-36.1-128-SNAPSHOT.ear</source-path>
+    <source-path>servers/AdminServer7027/upload/qweloggen-qweloggen-36.1-128-SNAPSHOT.ear</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
   <app-deployment>
-    <name>vegloggen-statistikk-36</name>
+    <name>qweloggen-statistikk-36</name>
     <target>cluster-nvmsstatistikk-01</target>
     <module-type>ear</module-type>
-    <source-path>servers/AdminServer7027/upload/vegloggen-statistikk-36.1-117-SNAPSHOT.ear</source-path>
+    <source-path>servers/AdminServer7027/upload/qweloggen-statistikk-36.1-117-SNAPSHOT.ear</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
   <app-deployment>
-    <name>vegloggen-datex-36</name>
+    <name>qweloggen-datex-36</name>
     <target>cluster-nvmsdatex-01</target>
     <module-type>ear</module-type>
-    <source-path>servers/AdminServer7027/upload/vegloggen-datex-36.1-117-SNAPSHOT.ear</source-path>
+    <source-path>servers/AdminServer7027/upload/qweloggen-datex-36.1-117-SNAPSHOT.ear</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
   <app-deployment>
-    <name>vegmelding-vegmelding-36</name>
-    <target>cluster-vegmelding-01</target>
+    <name>qwemelding-qwemelding-36</name>
+    <target>cluster-qwemelding-01</target>
     <module-type>ear</module-type>
-    <source-path>servers/AdminServer7027/upload/vegmelding-vegmelding-36.1-117-SNAPSHOT.ear</source-path>
+    <source-path>servers/AdminServer7027/upload/qwemelding-qwemelding-36.1-117-SNAPSHOT.ear</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
   <app-deployment>
-    <name>vegloggen-rute-36</name>
+    <name>qweloggen-rute-36</name>
     <target>cluster-nvmsroute-01</target>
     <module-type>ear</module-type>
-    <source-path>servers/AdminServer7027/upload/vegloggen-rute-36.1.5.ear</source-path>
+    <source-path>servers/AdminServer7027/upload/qweloggen-rute-36.1.5.ear</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
   <app-deployment>
-    <name>vegloggen-kart-36</name>
-    <target>cluster-vegloggenkart-01</target>
+    <name>qweloggen-kart-36</name>
+    <target>cluster-qweloggenkart-01</target>
     <module-type>ear</module-type>
-    <source-path>servers/AdminServer7027/upload/vegloggen-kart-36.1.6.ear</source-path>
+    <source-path>servers/AdminServer7027/upload/qweloggen-kart-36.1.6.ear</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
@@ -434,16 +434,16 @@
     </node-manager>
   </machine>
   <migratable-target>
-    <name>server-vegloggen-01 (migratable)</name>
+    <name>server-qweloggen-01 (migratable)</name>
     <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
-    <user-preferred-server>server-vegloggen-01</user-preferred-server>
-    <cluster>cluster-vegloggen-01</cluster>
+    <user-preferred-server>server-qweloggen-01</user-preferred-server>
+    <cluster>cluster-qweloggen-01</cluster>
   </migratable-target>
   <migratable-target>
-    <name>server-vegloggen-02 (migratable)</name>
+    <name>server-qweloggen-02 (migratable)</name>
     <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
-    <user-preferred-server>server-vegloggen-02</user-preferred-server>
-    <cluster>cluster-vegloggen-01</cluster>
+    <user-preferred-server>server-qweloggen-02</user-preferred-server>
+    <cluster>cluster-qweloggen-01</cluster>
   </migratable-target>
   <migratable-target>
     <name>server-nvmsloc-01 (migratable)</name>
@@ -470,16 +470,16 @@
     <cluster>cluster-nvmsroute-01</cluster>
   </migratable-target>
   <migratable-target>
-    <name>server-vegloggenkart-01 (migratable)</name>
+    <name>server-qweloggenkart-01 (migratable)</name>
     <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
-    <user-preferred-server>server-vegloggenkart-01</user-preferred-server>
-    <cluster>cluster-vegloggenkart-01</cluster>
+    <user-preferred-server>server-qweloggenkart-01</user-preferred-server>
+    <cluster>cluster-qweloggenkart-01</cluster>
   </migratable-target>
   <migratable-target>
-    <name>server-vegloggenkart-02 (migratable)</name>
+    <name>server-qweloggenkart-02 (migratable)</name>
     <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
-    <user-preferred-server>server-vegloggenkart-02</user-preferred-server>
-    <cluster>cluster-vegloggenkart-01</cluster>
+    <user-preferred-server>server-qweloggenkart-02</user-preferred-server>
+    <cluster>cluster-qweloggenkart-01</cluster>
   </migratable-target>
   <migratable-target>
     <name>server-nvmsstatistikk-01 (migratable)</name>
@@ -494,16 +494,16 @@
     <cluster>cluster-nvmsstatistikk-01</cluster>
   </migratable-target>
   <migratable-target>
-    <name>server-vegmelding-01 (migratable)</name>
+    <name>server-qwemelding-01 (migratable)</name>
     <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
-    <user-preferred-server>server-vegmelding-01</user-preferred-server>
-    <cluster>cluster-vegmelding-01</cluster>
+    <user-preferred-server>server-qwemelding-01</user-preferred-server>
+    <cluster>cluster-qwemelding-01</cluster>
   </migratable-target>
   <migratable-target>
-    <name>server-vegmelding-02 (migratable)</name>
+    <name>server-qwemelding-02 (migratable)</name>
     <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
-    <user-preferred-server>server-vegmelding-02</user-preferred-server>
-    <cluster>cluster-vegmelding-01</cluster>
+    <user-preferred-server>server-qwemelding-02</user-preferred-server>
+    <cluster>cluster-qwemelding-01</cluster>
   </migratable-target>
   <migratable-target>
     <name>server-nvmsdatex-01 (migratable)</name>
@@ -520,12 +520,12 @@
   <admin-server-name>AdminServer7027</admin-server-name>
   <jdbc-system-resource>
     <name>nvmsDS</name>
-    <target>cluster-vegloggen-01,cluster-nvmsstatistikk-01,cluster-nvmsdatex-01</target>
+    <target>cluster-qweloggen-01,cluster-nvmsstatistikk-01,cluster-nvmsdatex-01</target>
     <descriptor-file-name>jdbc/nvmsDS-5283-jdbc.xml</descriptor-file-name>
   </jdbc-system-resource>
   <jdbc-system-resource>
     <name>nvmsDS-message</name>
-    <target>cluster-vegmelding-01</target>
+    <target>cluster-qwemelding-01</target>
     <descriptor-file-name>jdbc/nvmsDS-message-1961-jdbc.xml</descriptor-file-name>
   </jdbc-system-resource>
   <jdbc-system-resource>
@@ -535,12 +535,12 @@
   </jdbc-system-resource>
   <jdbc-system-resource>
     <name>locationNgDS</name>
-    <target>cluster-nvmsloc-01,cluster-nvmsroute-01,cluster-vegloggenkart-01</target>
+    <target>cluster-nvmsloc-01,cluster-nvmsroute-01,cluster-qweloggenkart-01</target>
     <descriptor-file-name>jdbc/locationNgDS-5171-jdbc.xml</descriptor-file-name>
   </jdbc-system-resource>
   <jdbc-system-resource>
     <name>locationApiNvmsDS-message</name>
-    <target>cluster-nvmsloc-01,cluster-vegmelding-01</target>
+    <target>cluster-nvmsloc-01,cluster-qwemelding-01</target>
     <descriptor-file-name>jdbc/locationApiNvmsDS-message-1692-jdbc.xml</descriptor-file-name>
   </jdbc-system-resource>
   <jdbc-system-resource>
@@ -550,7 +550,7 @@
   </jdbc-system-resource>
   <jdbc-system-resource>
     <name>nvmsICApiDS</name>
-    <target>cluster-vegloggen-01</target>
+    <target>cluster-qweloggen-01</target>
     <descriptor-file-name>jdbc/nvmsICApiDS-5279-jdbc.xml</descriptor-file-name>
   </jdbc-system-resource>
   <admin-console>

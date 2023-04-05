@@ -104,11 +104,11 @@ unittest {
 	assert(server.port == 0);
 	assert(disregardDomain("a.b.c") == "a");
 	assert(disregardDomain("a") == "a");
-	parseWeblogicConfig(server, "weblogic-config-2.xml", "server-vegloggen-01", pid, "zqxujapp21.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config-2.xml", "server-qweloggen-01", pid, "zqxujapp21.somesite.no");
 	debug (xml) { output(server); }
 	assert(server.machine == "machine-zqxujapp21");
 	assert(server.port == 7560);
-	assert(server.cluster == "cluster-vegloggen-01");
+	assert(server.cluster == "cluster-qweloggen-01");
 	assert(server.domain == "domain-vt-u05");
 	parseWeblogicConfig(server, "weblogic-config-3.xml", "server-nortraf-01", pid, "zqxujapp02.somesite.no");
 	debug (xml) { output(server); }

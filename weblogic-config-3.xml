@@ -135,10 +135,10 @@
     <security-dd-model>DDOnly</security-dd-model>
   </app-deployment>
   <app-deployment>
-    <name>nortraf-vegvaer</name>
+    <name>nortraf-qwevaer</name>
     <target>cluster-nortraf-01</target>
     <module-type>war</module-type>
-    <source-path>servers/AdminServer7017/upload/nortraf-vegvaer.war</source-path>
+    <source-path>servers/AdminServer7017/upload/nortraf-qwevaer.war</source-path>
     <deployment-order>100</deployment-order>
     <security-dd-model>DDOnly</security-dd-model>
   </app-deployment>
