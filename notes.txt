@@ -1,0 +1,22 @@
+
+Weblogic config Cache
+=====================
+Cache data must contain all data extracted from config.xml
+Servername identifies each WebLogic server
+PID identifies each instance
+Cache key must be an aggregation of servername and PID.
+When extracting WebLogic config, consult cache first.
+A valid cache entry can be found using it's agregate key - servername and PID
+Cache is lazily loaded from persistent store at first use.
+At first time usage, the cache will be created empty.
+Cache loaded from persistent store may have dirty entries.
+A cache-entry is dirty when the server instance is no longer running.
+Dirty cache entries must be purged from cache.
+Dirty cache is either owing to a server reboot or a server stop.
+Reboot can be determined by comparing a running server's PID to what is stored in cache.
+A stopped server will no longer have an entry in the process listing - ps
+Marking of still valid cache entries can be done when found.
+Only when a valid cache entry can NOT be found, the config xml-file will be parsed.
+Upon program exit, the cache must be cleaned and saved to persistent storage. 
+Cleaning the cache can be acomplished by saving only entries reflecting running servers.
+

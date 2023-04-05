@@ -1,0 +1,32 @@
+Basestat for weblogic
+======================
+
+
+/opt/Oracle/Middleware/jrmc-4.0.1-1.6.0/bin/java #java /opt/Oracle/Middleware/jrmc-4.0.1-1.6.0/
+-jrockit -Xms512m -Xmx512m  #MMIN, MMAX
+-Dweblogic.Name=AdminServer7014 #servernavn virtuell AdminServer7014
+-Djava.security.policy=/opt/Oracle/Middleware/wlserver_10.3/server/lib/weblogic.policy 
+-Dweblogic.ProductionModeEnabled=true 
+-Dweblogic.system.BootIdentityFile=/opt/Oracle/Middleware/user_projects/domains/domain-oko-u01/servers/AdminServer7014/security/boot.properties #domain domain-oko-u01
+-Dweblogic.nodemanager.ServiceEnabled=true 
+-Da 
+-Dplatform.home=/opt/Oracle/Middleware/wlserver_10.3  #middleware-home /opt/Oracle/Middleware
+-Dwls.home=/opt/Oracle/Middleware/wlserver_10.3/server 
+-Dweblogic.home=/opt/Oracle/Middleware/wlserver_10.3/server 
+-Dweblogic.management.discover=true 
+-Dwlw.iterativeDev=false 
+-Dwlw.testConsole=false 
+-Dwlw.logErrorsToConsole=false 
+-Dweblogic.ext.dirs=/opt/Oracle/Middleware/patch_wls1034/profiles/default/sysext_manifest_classpath:/opt/Oracle/Middleware/patch_ocp360/profiles/default/sysext_manifest_classpath weblogic.Server
+
+suvujapp01:/opt/Oracle/Middleware/user_projects/domains/domain-oko-u01/config> config.xml <server> 
+
+<name>server-ehf-01</name>
+<machine>machine-suvujapp06</machine>
+listen-port>7140</listen-port>
+    <cluster>cluster-ehf-01</cluster>
+
+
+http://suvpasdrift01.somesite.no:16000/maria/baseinfo/search.json?basename=+base-dateximport-01&hostname=suvutomcat05%
+
+/usr/local/plattform/sadm/bin/basestat --json --name 

@@ -1,0 +1,25 @@
+TODO
+====
+
+Locate application config files
+-------------------------------
+- Are there files in the directory /data/<base>/conf ?
+- Is the directory /data/<base>/conf in Java classpath ?
+-Are ther files in the directory ${CATALINA_BASE}/conf/suvconf/ ?
+-Is the directory ${CATALINA_BASE}/conf/suvconf/ in Java classpath ?
+
+Detect JVM variable LOGDIR
+--------------------------
+- Search through all environmet variables visible to the Java process running each Tomcat-base, for the variable LOGDIR, to learn if it is set or not.
+
+Find source of environment variable JAVA_USER_OPTS
+--------------------------------------------------
+- Does the the file ${CATALINA_BASE}/init.d/java_user_opts exist ?
+
+Locate application war-files
+----------------------------
+- Are there war-files in the directory /data/<base>/warfiles ?
+-Does the file ${CATALINA_BASE}/conf/suvconf/context1-include.xml contain refernce to any of above war-files ?
+- Are there war-files, beside demods.war, inside ${CATALINA_BASE}/webapps ?
+
+

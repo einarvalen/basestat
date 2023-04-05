@@ -1,0 +1,35 @@
+#Run to distribute basestat binary across all relevant hosts in the somesite realm
+#Usage: make -f Makefile-dist {tomcat|wls-utv|wls-test|wls-prod}"
+
+RSYNC=/usr/bin/rsync
+OPTIONS=-aiz --progress  --rsh='ssh -q'
+
+WLS_TEST=`exainfo -role weblogic-basestat-test-server`
+WLS_PROD=`exainfo -role weblogic-basestat-prod-server`
+WLS_PROD_PDADM=`exainfo -role weblogic-basestat-pdadm-prod-server`
+WLS_UTV=`exainfo -role weblogic-utv-server`
+TVEGLOGGEN=suvtvegloggen01 suvtvegloggen02 suvtvegloggen03 suvtvegloggen04
+PVEGLOGGEN=suvpvegloggen01 suvpvegloggen02 suvpvegloggen03 suvpvegloggen04
+KVEGLOGGEN=suvpveglkurs01 suvpveglkurs02
+
+TOMCAT=`exainfo -role tomcat-server`
+
+default:
+	echo "usage: make -f Makefile-dist {tomcat|wls-utv|wls-test|wls-prod}"
+
+wls-test:
+	for a in $(WLS_TEST); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat $$a:/usr/local/plattform/sadm/bin; done
+
+wls-prod:
+	for a in $(WLS_PROD); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat $$a:/usr/local/plattform/sadm/bin; done
+	for a in $(WLS_PROD_PDADM); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat pdadm@$$a:/usr/local/plattform/sadm/bin; done
+
+wls-utv:
+	for a in $(WLS_UTV); do echo "$$a";  $(RSYNC) $(OPTIONS) basestat $$a:/usr/local/plattform/sadm/bin; done
+
+tomcat:
+	for a in $(TOMCAT); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat pdadm@$$a:/usr/local/plattform/sadm/bin; done
+
+vegloggen:
+	for a in $(TVEGLOGGEN) $(PVEGLOGGEN) $(KVEGLOGGEN); do echo "$$a"; $(RSYNC) $(OPTIONS) basestat pdadm@$$a:/usr/local/plattform/sadm/bin; done
+

@@ -1,0 +1,8 @@
+.svn/
+*.tar
+*.tar.gz
+*.zip
+*.o
+basestat-test
+tags
+*.log

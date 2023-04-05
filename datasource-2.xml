@@ -1,0 +1,25 @@
+<!-- SUV DATASOURCE CONFIG -->
+
+               <Resource
+                       name="jdbc/tradferd"
+                       auth="Container"
+                       factory="oracle.ucp.jdbc.PoolDataSourceImpl"
+                       type="oracle.ucp.jdbc.PoolDataSource"
+                       description="jdbc/tradferd datasource"
+                       connectionFactoryClassName="oracle.jdbc.pool.OracleDataSource"
+                       minPoolSize="30"
+                       maxPoolSize="30"
+                       inactiveConnectionTimeout="20"
+                       maxConnectionReuseCount="10"
+                       user="tradferd"
+                       password="bre37tesuwretUsuSWU3"
+                       onsConfiguration="nodes=suvuexadb01-vip-sn3.somesite.no:6200,suvuexadb02-vip-sn3.somesite.no:6200"
+                       fastConnectionFailoverEnabled="true"                       
+                       connectionProperties=";oracle.net.ns.SQLnetDef.TCP_CONNTIMEOUT_STR=3000;"
+                       url="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=suvuexa-scan-sn3.somesite.no)(PORT=2484))(CONNECT_DATA=(SERVICE_NAME=tradferd_stm.somesite.no)))"
+                       connectionPoolName="jdbc/tradferd"
+                       validateConnectionOnBorrow="true"
+                       sqlForValidateConnection="select 1 from DUAL"
+               />
+
+

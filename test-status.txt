@@ -1,0 +1,39 @@
+Name:	java
+State:	S (sleeping)
+Tgid:	3433
+Pid:	3433
+PPid:	1
+TracerPid:	0
+Uid:	974	974	974	974
+Gid:	974	974	974	974
+Utrace:	0
+FDSize:	256
+Groups:	974 
+VmPeak:	 2641628 kB
+VmSize:	 2641624 kB
+VmLck:	       0 kB
+VmHWM:	  121980 kB
+VmRSS:	  120664 kB
+VmData:	 2492048 kB
+VmStk:	      88 kB
+VmExe:	       4 kB
+VmLib:	   16012 kB
+VmPTE:	     476 kB
+VmSwap:	       0 kB
+Threads:	23
+SigQ:	0/62775
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000000002
+SigCgt:	2000000181005ccd
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	ffffffffffffffff
+Cpus_allowed:	ffffffff
+Cpus_allowed_list:	0-31
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	1
+nonvoluntary_ctxt_switches:	4

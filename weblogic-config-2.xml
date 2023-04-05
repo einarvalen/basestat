@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<domain xmlns="http://xmlns.oracle.com/weblogic/domain" xmlns:sec="http://xmlns.oracle.com/weblogic/security" xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/security/xacml http://xmlns.oracle.com/weblogic/security/xacml/1.0/xacml.xsd http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator/1.0/passwordvalidator.xsd http://xmlns.oracle.com/weblogic/domain http://xmlns.oracle.com/weblogic/1.0/domain.xsd http://xmlns.oracle.com/weblogic/security http://xmlns.oracle.com/weblogic/1.0/security.xsd http://xmlns.oracle.com/weblogic/security/wls http://xmlns.oracle.com/weblogic/security/wls/1.0/wls.xsd">
+  <name>domain-vt-u05</name>
+  <domain-version>10.3.4.0</domain-version>
+  <security-configuration>
+    <name>domain-vt-u05</name>
+    <realm>
+      <sec:authentication-provider xsi:type="wls:default-authenticatorType"></sec:authentication-provider>
+      <sec:authentication-provider xsi:type="wls:default-identity-asserterType">
+        <sec:active-type>AuthenticatedUser</sec:active-type>
+      </sec:authentication-provider>
+      <sec:role-mapper xmlns:xac="http://xmlns.oracle.com/weblogic/security/xacml" xsi:type="xac:xacml-role-mapperType"></sec:role-mapper>
+      <sec:authorizer xmlns:xac="http://xmlns.oracle.com/weblogic/security/xacml" xsi:type="xac:xacml-authorizerType"></sec:authorizer>
+      <sec:adjudicator xsi:type="wls:default-adjudicatorType"></sec:adjudicator>
+      <sec:credential-mapper xsi:type="wls:default-credential-mapperType"></sec:credential-mapper>
+      <sec:cert-path-provider xsi:type="wls:web-logic-cert-path-providerType"></sec:cert-path-provider>
+      <sec:cert-path-builder>WebLogicCertPathProvider</sec:cert-path-builder>
+      <sec:name>myrealm</sec:name>
+      <sec:password-validator xmlns:pas="http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator" xsi:type="pas:system-password-validatorType">
+        <sec:name>SystemPasswordValidator</sec:name>
+        <pas:min-password-length>8</pas:min-password-length>
+        <pas:min-numeric-or-special-characters>1</pas:min-numeric-or-special-characters>
+      </sec:password-validator>
+    </realm>
+    <default-realm>myrealm</default-realm>
+    <credential-encrypted>{AES}A2JvhGdYJ3RN0mz5QVdqD/yqNMBWS67+U058Pu9mylN6mBgNYFUHUcLdnFMaN3cZpqdTOu61++RoGdsOvPcVsl3F878lZoFeE20DgMLdheHQ+AkAqakwPFNIeRlVehI5</credential-encrypted>
+    <node-manager-username>ndmgr</node-manager-username>
+    <node-manager-password-encrypted>{AES}b/v9wP3Pd6WN1xUK35S2g5puVFEC8Ji+lTjZGTsfGMc=</node-manager-password-encrypted>
+  </security-configuration>
+  <server>
+    <name>AdminServer7027</name>
+    <machine>machine-suvujapp20</machine>
+    <listen-port>7027</listen-port>
+    <listen-address></listen-address>
+  </server>
+  <server>
+    <name>server-vegloggen-01</name>
+    <machine>machine-suvujapp21</machine>
+    <listen-port>7560</listen-port>
+    <cluster>cluster-vegloggen-01</cluster>
+    <listen-address>suvujapp21</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegloggen/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-vegloggen-01</name>
+      <user-preferred-server>server-vegloggen-01</user-preferred-server>
+      <cluster>cluster-vegloggen-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-vegloggen-02</name>
+    <machine>machine-suvujapp22</machine>
+    <listen-port>7560</listen-port>
+    <cluster>cluster-vegloggen-01</cluster>
+    <listen-address>suvujapp22</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegloggen/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-vegloggen-02</name>
+      <user-preferred-server>server-vegloggen-02</user-preferred-server>
+      <cluster>cluster-vegloggen-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsloc-01</name>
+    <machine>machine-suvujapp21</machine>
+    <listen-port>7470</listen-port>
+    <cluster>cluster-nvmsloc-01</cluster>
+    <listen-address>suvujapp21</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties/</class-path>
+      <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/lokasjon/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsloc-01</name>
+      <user-preferred-server>server-nvmsloc-01</user-preferred-server>
+      <cluster>cluster-nvmsloc-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsloc-02</name>
+    <machine>machine-suvujapp22</machine>
+    <listen-port>7470</listen-port>
+    <cluster>cluster-nvmsloc-01</cluster>
+    <listen-address>suvujapp22</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties/</class-path>
+      <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/lokasjon/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsloc-02</name>
+      <user-preferred-server>server-nvmsloc-02</user-preferred-server>
+      <cluster>cluster-nvmsloc-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsroute-01</name>
+    <machine>machine-suvujapp21</machine>
+    <listen-port>7480</listen-port>
+    <cluster>cluster-nvmsroute-01</cluster>
+    <listen-address>suvujapp21</listen-address>
+    <server-start>
+      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=suvdev -Dschema=active</arguments>
+      <username>weblogic</username>
+      <password-encrypted>{AES}z9mExhyLHY/m7vHQ7bMF5Lszb4ghF+WfwhufhyiwzEg=</password-encrypted>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsroute-01</name>
+      <user-preferred-server>server-nvmsroute-01</user-preferred-server>
+      <cluster>cluster-nvmsroute-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsroute-02</name>
+    <machine>machine-suvujapp22</machine>
+    <listen-port>7480</listen-port>
+    <cluster>cluster-nvmsroute-01</cluster>
+    <listen-address>suvujapp22</listen-address>
+    <server-start>
+      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=suvdev -Dschema=active</arguments>
+      <username>weblogic</username>
+      <password-encrypted>{AES}/0doZK3cMbQro7RG81buoTT4+h6j3c3rLbS7H+hNPu4=</password-encrypted>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsroute-02</name>
+      <user-preferred-server>server-nvmsroute-02</user-preferred-server>
+      <cluster>cluster-nvmsroute-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-vegloggenkart-01</name>
+    <ssl>
+      <hostname-verifier xsi:nil="true"></hostname-verifier>
+      <hostname-verification-ignored>false</hostname-verification-ignored>
+      <client-certificate-enforced>false</client-certificate-enforced>
+      <two-way-ssl-enabled>false</two-way-ssl-enabled>
+      <jsse-enabled>false</jsse-enabled>
+    </ssl>
+    <machine>machine-suvujapp21</machine>
+    <listen-port>7490</listen-port>
+    <cluster>cluster-vegloggenkart-01</cluster>
+    <listen-address>suvujapp21</listen-address>
+    <server-start>
+      <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/vegloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
+      <username>weblogic</username>
+      <password-encrypted>{AES}/P4vClv9PKCKGe3qBn619oykTYZFtQbEwYLg9mwTMs0=</password-encrypted>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-vegloggenkart-01</name>
+      <user-preferred-server>server-vegloggenkart-01</user-preferred-server>
+      <cluster>cluster-vegloggenkart-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-vegloggenkart-02</name>
+    <ssl>
+      <hostname-verifier xsi:nil="true"></hostname-verifier>
+      <hostname-verification-ignored>false</hostname-verification-ignored>
+      <client-certificate-enforced>false</client-certificate-enforced>
+      <two-way-ssl-enabled>false</two-way-ssl-enabled>
+      <jsse-enabled>false</jsse-enabled>
+    </ssl>
+    <machine>machine-suvujapp22</machine>
+    <listen-port>7490</listen-port>
+    <cluster>cluster-vegloggenkart-01</cluster>
+    <listen-address>suvujapp22</listen-address>
+    <server-start>
+      <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/vegloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
+      <username>weblogic</username>
+      <password-encrypted>{AES}hSdLVLqMuSQLVUKRyUTgxl9ZWH3IBnWvYuL/fSEYCMU=</password-encrypted>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-vegloggenkart-02</name>
+      <user-preferred-server>server-vegloggenkart-02</user-preferred-server>
+      <cluster>cluster-vegloggenkart-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsstatistikk-01</name>
+    <machine>machine-suvujapp23</machine>
+    <listen-port>7530</listen-port>
+    <cluster>cluster-nvmsstatistikk-01</cluster>
+    <listen-address>suvujapp23</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/statistikk/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsstatistikk-01</name>
+      <user-preferred-server>server-nvmsstatistikk-01</user-preferred-server>
+      <cluster>cluster-nvmsstatistikk-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsstatistikk-02</name>
+    <machine>machine-suvujapp24</machine>
+    <listen-port>7530</listen-port>
+    <cluster>cluster-nvmsstatistikk-01</cluster>
+    <listen-address>suvujapp24</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/statistikk/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsstatistikk-02</name>
+      <user-preferred-server>server-nvmsstatistikk-02</user-preferred-server>
+      <cluster>cluster-nvmsstatistikk-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-vegmelding-01</name>
+    <machine>machine-suvujapp23</machine>
+    <listen-port>7540</listen-port>
+    <cluster>cluster-vegmelding-01</cluster>
+    <web-server>
+      <web-server-log>
+        <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(suvguid)</elf-fields>
+        <log-file-format>extended</log-file-format>
+      </web-server-log>
+    </web-server>
+    <listen-address>suvujapp23</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegmelding/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-vegmelding-01</name>
+      <user-preferred-server>server-vegmelding-01</user-preferred-server>
+      <cluster>cluster-vegmelding-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-vegmelding-02</name>
+    <machine>machine-suvujapp24</machine>
+    <listen-port>7540</listen-port>
+    <cluster>cluster-vegmelding-01</cluster>
+    <web-server>
+      <web-server-log>
+        <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(suvguid)</elf-fields>
+        <log-file-format>extended</log-file-format>
+      </web-server-log>
+    </web-server>
+    <listen-address>suvujapp24</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegmelding/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-vegmelding-02</name>
+      <user-preferred-server>server-vegmelding-02</user-preferred-server>
+      <cluster>cluster-vegmelding-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsdatex-01</name>
+    <machine>machine-suvujapp23</machine>
+    <listen-port>7550</listen-port>
+    <cluster>cluster-nvmsdatex-01</cluster>
+    <listen-address>suvujapp23</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/datex/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsdatex-01</name>
+      <user-preferred-server>server-nvmsdatex-01</user-preferred-server>
+      <cluster>cluster-nvmsdatex-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <server>
+    <name>server-nvmsdatex-02</name>
+    <machine>machine-suvujapp24</machine>
+    <listen-port>7550</listen-port>
+    <cluster>cluster-nvmsdatex-01</cluster>
+    <listen-address>suvujapp24</listen-address>
+    <server-start>
+      <class-path>/data/nvms/properties</class-path>
+      <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/datex/</arguments>
+    </server-start>
+    <jta-migratable-target>
+      <name>server-nvmsdatex-02</name>
+      <user-preferred-server>server-nvmsdatex-02</user-preferred-server>
+      <cluster>cluster-nvmsdatex-01</cluster>
+    </jta-migratable-target>
+  </server>
+  <cluster>
+    <name>cluster-vegloggen-01</name>
+    <cluster-messaging-mode>unicast</cluster-messaging-mode>
+  </cluster>
+  <cluster>
+    <name>cluster-nvmsloc-01</name>
+    <cluster-messaging-mode>unicast</cluster-messaging-mode>
+    <overload-protection>
+      <server-failure-trigger>
+        <max-stuck-thread-time>3600</max-stuck-thread-time>
+        <stuck-thread-count>0</stuck-thread-count>
+      </server-failure-trigger>
+    </overload-protection>
+  </cluster>
+  <cluster>
+    <name>cluster-nvmsroute-01</name>
+    <cluster-messaging-mode>unicast</cluster-messaging-mode>
+  </cluster>
+  <cluster>
+    <name>cluster-vegloggenkart-01</name>
+    <cluster-messaging-mode>unicast</cluster-messaging-mode>
+  </cluster>
+  <cluster>
+    <name>cluster-nvmsstatistikk-01</name>
+    <cluster-messaging-mode>unicast</cluster-messaging-mode>
+  </cluster>
+  <cluster>
+    <name>cluster-vegmelding-01</name>
+    <cluster-messaging-mode>unicast</cluster-messaging-mode>
+  </cluster>
+  <cluster>
+    <name>cluster-nvmsdatex-01</name>
+    <cluster-messaging-mode>unicast</cluster-messaging-mode>
+  </cluster>
+  <production-mode-enabled>true</production-mode-enabled>
+  <embedded-ldap>
+    <name>domain-vt-u05</name>
+    <credential-encrypted>{AES}KWrs5rw6o8Km09GauRCGaJ5GAPCiFaOHtbHBXQrmwzgmWdUftbaOna7ZTlggAOmq</credential-encrypted>
+  </embedded-ldap>
+  <configuration-version>10.3.4.0</configuration-version>
+  <app-deployment>
+    <name>vegloggen-lokasjon-36</name>
+    <target>cluster-nvmsloc-01</target>
+    <module-type>ear</module-type>
+    <source-path>servers/AdminServer7027/upload/vegloggen-lokasjon-36.1.51.ear</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <cache-in-app-directory>false</cache-in-app-directory>
+  </app-deployment>
+  <app-deployment>
+    <name>vegloggen-vegloggen-36</name>
+    <target>cluster-vegloggen-01</target>
+    <module-type>ear</module-type>
+    <source-path>servers/AdminServer7027/upload/vegloggen-vegloggen-36.1-128-SNAPSHOT.ear</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <cache-in-app-directory>false</cache-in-app-directory>
+  </app-deployment>
+  <app-deployment>
+    <name>vegloggen-statistikk-36</name>
+    <target>cluster-nvmsstatistikk-01</target>
+    <module-type>ear</module-type>
+    <source-path>servers/AdminServer7027/upload/vegloggen-statistikk-36.1-117-SNAPSHOT.ear</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <cache-in-app-directory>false</cache-in-app-directory>
+  </app-deployment>
+  <app-deployment>
+    <name>vegloggen-datex-36</name>
+    <target>cluster-nvmsdatex-01</target>
+    <module-type>ear</module-type>
+    <source-path>servers/AdminServer7027/upload/vegloggen-datex-36.1-117-SNAPSHOT.ear</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <cache-in-app-directory>false</cache-in-app-directory>
+  </app-deployment>
+  <app-deployment>
+    <name>vegmelding-vegmelding-36</name>
+    <target>cluster-vegmelding-01</target>
+    <module-type>ear</module-type>
+    <source-path>servers/AdminServer7027/upload/vegmelding-vegmelding-36.1-117-SNAPSHOT.ear</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <cache-in-app-directory>false</cache-in-app-directory>
+  </app-deployment>
+  <app-deployment>
+    <name>vegloggen-rute-36</name>
+    <target>cluster-nvmsroute-01</target>
+    <module-type>ear</module-type>
+    <source-path>servers/AdminServer7027/upload/vegloggen-rute-36.1.5.ear</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <cache-in-app-directory>false</cache-in-app-directory>
+  </app-deployment>
+  <app-deployment>
+    <name>vegloggen-kart-36</name>
+    <target>cluster-vegloggenkart-01</target>
+    <module-type>ear</module-type>
+    <source-path>servers/AdminServer7027/upload/vegloggen-kart-36.1.6.ear</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <cache-in-app-directory>false</cache-in-app-directory>
+  </app-deployment>
+  <machine>
+    <name>machine-suvujapp20</name>
+    <node-manager>
+      <name>machine-suvujapp20</name>
+      <nm-type>Plain</nm-type>
+      <listen-address>suvujapp20.somesite.no</listen-address>
+      <listen-port>5568</listen-port>
+      <debug-enabled>false</debug-enabled>
+    </node-manager>
+  </machine>
+  <machine>
+    <name>machine-suvujapp21</name>
+    <node-manager>
+      <name>machine-suvujapp21</name>
+      <nm-type>Plain</nm-type>
+      <listen-address>suvujapp21.somesite.no</listen-address>
+      <listen-port>5568</listen-port>
+      <debug-enabled>false</debug-enabled>
+    </node-manager>
+  </machine>
+  <machine>
+    <name>machine-suvujapp22</name>
+    <node-manager>
+      <name>machine-suvujapp22</name>
+      <nm-type>Plain</nm-type>
+      <listen-address>suvujapp22.somesite.no</listen-address>
+      <listen-port>5568</listen-port>
+      <debug-enabled>false</debug-enabled>
+    </node-manager>
+  </machine>
+  <machine>
+    <name>machine-suvujapp23</name>
+    <node-manager>
+      <name>machine-suvujapp23</name>
+      <nm-type>Plain</nm-type>
+      <listen-address>suvujapp23.somesite.no</listen-address>
+      <listen-port>5568</listen-port>
+      <debug-enabled>false</debug-enabled>
+    </node-manager>
+  </machine>
+  <machine>
+    <name>machine-suvujapp24</name>
+    <node-manager>
+      <name>machine-suvujapp24</name>
+      <nm-type>Plain</nm-type>
+      <listen-address>suvujapp24.somesite.no</listen-address>
+      <listen-port>5568</listen-port>
+      <debug-enabled>false</debug-enabled>
+    </node-manager>
+  </machine>
+  <migratable-target>
+    <name>server-vegloggen-01 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-vegloggen-01</user-preferred-server>
+    <cluster>cluster-vegloggen-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-vegloggen-02 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-vegloggen-02</user-preferred-server>
+    <cluster>cluster-vegloggen-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsloc-01 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsloc-01</user-preferred-server>
+    <cluster>cluster-nvmsloc-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsloc-02 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsloc-02</user-preferred-server>
+    <cluster>cluster-nvmsloc-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsroute-01 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsroute-01</user-preferred-server>
+    <cluster>cluster-nvmsroute-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsroute-02 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsroute-02</user-preferred-server>
+    <cluster>cluster-nvmsroute-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-vegloggenkart-01 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-vegloggenkart-01</user-preferred-server>
+    <cluster>cluster-vegloggenkart-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-vegloggenkart-02 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-vegloggenkart-02</user-preferred-server>
+    <cluster>cluster-vegloggenkart-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsstatistikk-01 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsstatistikk-01</user-preferred-server>
+    <cluster>cluster-nvmsstatistikk-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsstatistikk-02 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsstatistikk-02</user-preferred-server>
+    <cluster>cluster-nvmsstatistikk-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-vegmelding-01 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-vegmelding-01</user-preferred-server>
+    <cluster>cluster-vegmelding-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-vegmelding-02 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-vegmelding-02</user-preferred-server>
+    <cluster>cluster-vegmelding-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsdatex-01 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsdatex-01</user-preferred-server>
+    <cluster>cluster-nvmsdatex-01</cluster>
+  </migratable-target>
+  <migratable-target>
+    <name>server-nvmsdatex-02 (migratable)</name>
+    <notes>This is a system generated default migratable target for a server. Do not delete manually.</notes>
+    <user-preferred-server>server-nvmsdatex-02</user-preferred-server>
+    <cluster>cluster-nvmsdatex-01</cluster>
+  </migratable-target>
+  <admin-server-name>AdminServer7027</admin-server-name>
+  <jdbc-system-resource>
+    <name>nvmsDS</name>
+    <target>cluster-vegloggen-01,cluster-nvmsstatistikk-01,cluster-nvmsdatex-01</target>
+    <descriptor-file-name>jdbc/nvmsDS-5283-jdbc.xml</descriptor-file-name>
+  </jdbc-system-resource>
+  <jdbc-system-resource>
+    <name>nvmsDS-message</name>
+    <target>cluster-vegmelding-01</target>
+    <descriptor-file-name>jdbc/nvmsDS-message-1961-jdbc.xml</descriptor-file-name>
+  </jdbc-system-resource>
+  <jdbc-system-resource>
+    <name>locationApiDsDataA</name>
+    <target></target>
+    <descriptor-file-name>jdbc/locationApiDsDataA-9251-jdbc.xml</descriptor-file-name>
+  </jdbc-system-resource>
+  <jdbc-system-resource>
+    <name>locationNgDS</name>
+    <target>cluster-nvmsloc-01,cluster-nvmsroute-01,cluster-vegloggenkart-01</target>
+    <descriptor-file-name>jdbc/locationNgDS-5171-jdbc.xml</descriptor-file-name>
+  </jdbc-system-resource>
+  <jdbc-system-resource>
+    <name>locationApiNvmsDS-message</name>
+    <target>cluster-nvmsloc-01,cluster-vegmelding-01</target>
+    <descriptor-file-name>jdbc/locationApiNvmsDS-message-1692-jdbc.xml</descriptor-file-name>
+  </jdbc-system-resource>
+  <jdbc-system-resource>
+    <name>locationApiNvmsDS</name>
+    <target></target>
+    <descriptor-file-name>jdbc/locationApiNvmsDS-5202-jdbc.xml</descriptor-file-name>
+  </jdbc-system-resource>
+  <jdbc-system-resource>
+    <name>nvmsICApiDS</name>
+    <target>cluster-vegloggen-01</target>
+    <descriptor-file-name>jdbc/nvmsICApiDS-5279-jdbc.xml</descriptor-file-name>
+  </jdbc-system-resource>
+  <admin-console>
+    <cookie-name>ADMINCONSOLESESSIONdomain-vt-u05</cookie-name>
+    <session-timeout>3600</session-timeout>
+  </admin-console>
+</domain>
+
