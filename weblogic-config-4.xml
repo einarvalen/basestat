@@ -58,7 +58,7 @@
       <server-private-key-alias>autoreg</server-private-key-alias>
       <server-private-key-pass-phrase-encrypted>{AES}c8UvXlNEs2kt0yGRpB66P5D8PpBNci8f+9rAmIn1/fs=</server-private-key-pass-phrase-encrypted>
     </ssl>
-    <machine>machine-suvujapp01</machine>
+    <machine>machine-zqxujapp01</machine>
     <listen-port>7003</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <listen-address></listen-address>
@@ -102,7 +102,7 @@
       <number-of-files-limited>false</number-of-files-limited>
       <rotate-log-on-startup>false</rotate-log-on-startup>
     </log>
-    <machine>machine-suvujapp02</machine>
+    <machine>machine-zqxujapp02</machine>
     <listen-port>7300</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <cluster>cluster-areg-01</cluster>
@@ -162,7 +162,7 @@
       <number-of-files-limited>false</number-of-files-limited>
       <rotate-log-on-startup>false</rotate-log-on-startup>
     </log>
-    <machine>machine-suvujapp03</machine>
+    <machine>machine-zqxujapp03</machine>
     <listen-port>7300</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <cluster>cluster-areg-01</cluster>
@@ -201,11 +201,11 @@
     <ssl>
       <enabled>false</enabled>
     </ssl>
-    <machine>machine-suvujapp02</machine>
+    <machine>machine-zqxujapp02</machine>
     <listen-port>7301</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <cluster>cluster-minekjt-01</cluster>
-    <listen-address>suvujapp02.somesite.no</listen-address>
+    <listen-address>zqxujapp02.somesite.no</listen-address>
     <java-compiler>javac</java-compiler>
     <server-start>
       <arguments>-Dlog4j.configuration=file:/opt/Oracle/Middleware/user_projects/domains/domain-tk-u01/lib/log4j.xml</arguments>
@@ -224,11 +224,11 @@
     <ssl>
       <enabled>false</enabled>
     </ssl>
-    <machine>machine-suvujapp03</machine>
+    <machine>machine-zqxujapp03</machine>
     <listen-port>7301</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <cluster>cluster-minekjt-01</cluster>
-    <listen-address>suvujapp03.somesite.no</listen-address>
+    <listen-address>zqxujapp03.somesite.no</listen-address>
     <java-compiler>javac</java-compiler>
     <server-start>
       <class-path></class-path>
@@ -246,7 +246,7 @@
   <cluster>
     <name>cluster-areg-01</name>
     <cluster-messaging-mode>unicast</cluster-messaging-mode>
-    <candidate-machines-for-migratable-server>machine-suvujapp02,machine-suvujapp03</candidate-machines-for-migratable-server>
+    <candidate-machines-for-migratable-server>machine-zqxujapp02,machine-zqxujapp03</candidate-machines-for-migratable-server>
     <additional-auto-migration-attempts>3</additional-auto-migration-attempts>
     <millis-to-sleep-between-auto-migration-attempts>180000</millis-to-sleep-between-auto-migration-attempts>
     <migration-basis>consensus</migration-basis>
@@ -323,30 +323,30 @@
     <security-dd-model>DDOnly</security-dd-model>
   </app-deployment>
   <machine>
-    <name>machine-suvujapp02</name>
+    <name>machine-zqxujapp02</name>
     <node-manager>
-      <name>machine-suvujapp02</name>
+      <name>machine-zqxujapp02</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp02.somesite.no</listen-address>
+      <listen-address>zqxujapp02.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp03</name>
+    <name>machine-zqxujapp03</name>
     <node-manager>
-      <name>machine-suvujapp03</name>
+      <name>machine-zqxujapp03</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp03.somesite.no</listen-address>
+      <listen-address>zqxujapp03.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp01</name>
+    <name>machine-zqxujapp01</name>
     <node-manager>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp01.somesite.no</listen-address>
+      <listen-address>zqxujapp01.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>

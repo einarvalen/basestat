@@ -8,10 +8,10 @@ for host in ${HOSTS}; do
   ssh -C pdadm@${host} "basestat --csv --tomcat ${skip_headings}"
   skip_headings='--skip_headings'
 done > "/tmp/$ROLE".csv
-scp "/tmp/$ROLE".csv pdadm@suvumariasys01:/tmp
-scp "/tmp/$ROLE".csv pdadm@suvumariasys02:/tmp
-scp "/tmp/$ROLE".csv pdadm@suvtmariasys01:/tmp
-scp "/tmp/$ROLE".csv pdadm@suvtmariasys02:/tmp
-scp "/tmp/$ROLE".csv pdadm@suvpmariasys01:/tmp
-scp "/tmp/$ROLE".csv pdadm@suvpmariasys02:/tmp
+scp "/tmp/$ROLE".csv pdadm@zqxumariasys01:/tmp
+scp "/tmp/$ROLE".csv pdadm@zqxumariasys02:/tmp
+scp "/tmp/$ROLE".csv pdadm@zqxtmariasys01:/tmp
+scp "/tmp/$ROLE".csv pdadm@zqxtmariasys02:/tmp
+scp "/tmp/$ROLE".csv pdadm@zqxpmariasys01:/tmp
+scp "/tmp/$ROLE".csv pdadm@zqxpmariasys02:/tmp
 

@@ -82,55 +82,55 @@ unittest {
 	debug (xml) { writeln("\nTomcat port: ", port); }
 	Server server;
 	int pid = 456;
-	parseWeblogicConfig(server, "weblogic-config.xml", "server-ehf-01", pid, "suvujapp06.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config.xml", "server-ehf-01", pid, "zqxujapp06.somesite.no");
 	debug (xml) { output(server); }
-	assert(server.machine == "machine-suvujapp06");
+	assert(server.machine == "machine-zqxujapp06");
 	assert(server.port == 7140);
 	assert(server.cluster == "cluster-ehf-01");
 	assert(server.domain == "domain-oko-u01");
 	parseWeblogicConfig(server, "weblogic-config.xml", "AdminServer7014", pid, "");
 	debug (xml) { output(server); }
-	assert(server.machine == "machine-suvujapp01");
+	assert(server.machine == "machine-zqxujapp01");
 	assert(server.port == 7014);
 	assert(server.cluster == "");
-	parseWeblogicConfig(server, "weblogic-config.xml", "server-ehf-02", pid, "suvujapp07.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config.xml", "server-ehf-02", pid, "zqxujapp07.somesite.no");
 	debug (xml) { output(server); }
-	assert(server.machine == "machine-suvujapp07");
+	assert(server.machine == "machine-zqxujapp07");
 	assert(server.port == 7140);
 	assert(server.cluster == "cluster-ehf-01");
 	///cache = cache.init;
-	parseWeblogicConfig(server, "weblogic-config.xml", "non-existing-server", pid, "suvujapp06.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config.xml", "non-existing-server", pid, "zqxujapp06.somesite.no");
 	//writeln("server.port=", server.port);
 	assert(server.port == 0);
 	assert(disregardDomain("a.b.c") == "a");
 	assert(disregardDomain("a") == "a");
-	parseWeblogicConfig(server, "weblogic-config-2.xml", "server-vegloggen-01", pid, "suvujapp21.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config-2.xml", "server-vegloggen-01", pid, "zqxujapp21.somesite.no");
 	debug (xml) { output(server); }
-	assert(server.machine == "machine-suvujapp21");
+	assert(server.machine == "machine-zqxujapp21");
 	assert(server.port == 7560);
 	assert(server.cluster == "cluster-vegloggen-01");
 	assert(server.domain == "domain-vt-u05");
-	parseWeblogicConfig(server, "weblogic-config-3.xml", "server-nortraf-01", pid, "suvujapp02.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config-3.xml", "server-nortraf-01", pid, "zqxujapp02.somesite.no");
 	debug (xml) { output(server); }
-	assert(server.machine == "machine-suvujapp02");
+	assert(server.machine == "machine-zqxujapp02");
 	assert(server.port == 7170);
 	assert(server.cluster == "cluster-nortraf-01");
 	assert(server.domain == "domain-tmt-u02");
-	parseWeblogicConfig(server, "weblogic-config-4.xml", "server-areg-01", pid, "suvujapp02.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config-4.xml", "server-areg-01", pid, "zqxujapp02.somesite.no");
 	debug (xml) { output(server); }
-	assert(server.machine == "machine-suvujapp02");
+	assert(server.machine == "machine-zqxujapp02");
 	assert(server.port == 7300);
 	assert(server.cluster == "cluster-areg-01");
 	assert(server.domain == "domain-tk-u01");
-	parseWeblogicConfig(server, "weblogic-config-5.xml", "server-brutus-02", pid, "suvujapp14.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config-5.xml", "server-brutus-02", pid, "zqxujapp14.somesite.no");
 	debug (xml) { output(server); }
-	assert(server.machine == "machine-suvujapp14");
+	assert(server.machine == "machine-zqxujapp14");
 	assert(server.cluster == "cluster-brutus-01");
 	assert(server.domain == "domain-tmt-u03");
 	assert(server.port == 8600);
-	parseWeblogicConfig(server, "weblogic-config-6.xml", "bi_server2", pid, "suvujapp29.somesite.no");
+	parseWeblogicConfig(server, "weblogic-config-6.xml", "bi_server2", pid, "zqxujapp29.somesite.no");
 	debug (xml) { output(server); }
-	assert(server.machine == "suvujapp29");
+	assert(server.machine == "zqxujapp29");
 	assert(server.cluster == "bi_cluster");
 	assert(server.domain == "domain-obiee-u01");
 	assert(server.port == 19704);

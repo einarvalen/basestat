@@ -82,12 +82,12 @@ unittest {
 			if (proc.pid == 1) {
 				assert(proc.user == "tcikt06");
 				assert(proc.pcpu == 0.0);
-				assert(proc.catalinaBase == "/opt/suv/ikt/tc-ikt-u06/base-soabasisvaluta-01");
+				assert(proc.catalinaBase == "/opt/zqx/ikt/tc-ikt-u06/base-soabasisvaluta-01");
 				assert(proc.java == "/opt/java/1.8");
 			} else if (proc.pid == 2) {
 				assert(proc.user == "tcvt07");
 				assert(proc.pcpu == 1.3);
-				assert(proc.catalinaBase == "/opt/suv/vt/tc-vt-u07/base-datex2-01");
+				assert(proc.catalinaBase == "/opt/zqx/vt/tc-vt-u07/base-datex2-01");
 				assert(proc.catalinaHome == "/opt/apache/tomcat/8.0");
 			}
 		});
@@ -149,8 +149,8 @@ bool isWeblogic(const ref Proc proc) @safe pure nothrow @nogc {
 }
 
 private void extractBase( string catalinaBase, ref Proc proc) {
-	if (catalinaBase.length > 0 && catalinaBase.startsWith("/opt/suv/") )
-		formattedRead(catalinaBase, "/opt/suv/%s/%s/%s", &proc.project, &proc.cluster, &proc.basename);
+	if (catalinaBase.length > 0 && catalinaBase.startsWith("/opt/zqx/") )
+		formattedRead(catalinaBase, "/opt/zqx/%s/%s/%s", &proc.project, &proc.cluster, &proc.basename);
 }
 
 private bool isLogDirEnvVariableSet() {
@@ -177,7 +177,7 @@ private string[] listWarFilesInDir(string path) {
 unittest {
 	Proc proc;
 	extractBase("", proc);
-	extractBase("/opt/suv/ikt/tc-ikt-u06/base-soabasisvaluta-01", proc);
+	extractBase("/opt/zqx/ikt/tc-ikt-u06/base-soabasisvaluta-01", proc);
 	assert(proc.basename == "base-soabasisvaluta-01");
 	assert(proc.project == "ikt");
 	assert(proc.cluster == "tc-ikt-u06");
@@ -185,7 +185,7 @@ unittest {
 	assert(proc.isLogDirSet == false);
 	assert(proc.java_user_opts == false);
 	Proc proc2;
-	extractBase("/opt/suv/vt/tc-vt-u07/base-datex2-01", proc2);
+	extractBase("/opt/zqx/vt/tc-vt-u07/base-datex2-01", proc2);
 	assert(proc2.basename == "base-datex2-01");
 	assert(proc2.project == "vt");
 	assert(proc2.cluster == "tc-vt-u07");
@@ -216,7 +216,7 @@ unittest {
 		if (proc.pid == 3433) { assert(proc.xms == 128); ++count; }
 		if (proc.pid == 8357) { assert(proc.xmx == 2048); ++count; }
 		if (proc.pid == 8357) { assert(proc.catalinaHome == "/opt/apache/tomcat/8.0"); ++count; }
-		if (proc.pid == 3433) { assert(proc.catalinaBase == "/opt/suv/ikt/tc-ikt-u06/base-soabasisvaluta-01"); ++count; }
+		if (proc.pid == 3433) { assert(proc.catalinaBase == "/opt/zqx/ikt/tc-ikt-u06/base-soabasisvaluta-01"); ++count; }
 		if (proc.pid == 3433) { assert(proc.middlewareHome== ""); ++count; }
 		if (proc.pid == 8357) { assert(proc.wlscfg == ""); ++count; }
 		if (proc.pid == 6342) { assert(proc.user == "weblogic"); ++count; }

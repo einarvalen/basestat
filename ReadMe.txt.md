@@ -5,7 +5,7 @@ Basestat
 Build server
 ------------
 
-	  ssh suvpastools01
+	  ssh zqxpastools01
 
 Git
 ---
@@ -34,8 +34,8 @@ Build
 Distribute
 ----------
 
-	  scp basestat suvpasdrift01:/tmp
-	  ssh suvpassdrift01
+	  scp basestat zqxpasdrift01:/tmp
+	  ssh zqxpassdrift01
     su -
 
 ### Test-run as pdadm
@@ -49,10 +49,10 @@ Distribute
 ### Test-run on a small selection of servers
 
 	  su - weblogic
-	  scp /tmp/basestat pdadm@suvutomcat07:/tmp
-	  scp /tmp/basestat suvujapp29:/tmp
-	  ssh pdadm@suvutomcat07 -C /tmp/basestat
-	  ssh suvujapp29 -C /tmp/basestat
+	  scp /tmp/basestat pdadm@zqxutomcat07:/tmp
+	  scp /tmp/basestat zqxujapp29:/tmp
+	  ssh pdadm@zqxutomcat07 -C /tmp/basestat
+	  ssh zqxujapp29 -C /tmp/basestat
 
 ### Update sadm
 
@@ -68,15 +68,15 @@ Distribute
 
 ### Verify
 	
-	  ssh pdadm@suvutomcat07 -C basestat
-	  ssh pdadm@suvujapp29 -C basestat
+	  ssh pdadm@zqxutomcat07 -C basestat
+	  ssh pdadm@zqxujapp29 -C basestat
 
 	  test-basestat.sh 
 	  test-basestat-wls.sh
 
-	  ssh pdadm@suvusn3tc07 -C "basestat --json --name=kanal"
-	  ssh pdadm@suvusn3tc08 -C "basestat --splunk"
-	  ssh pdadm@suvusn1tc04 -C "basestat --csv --tomcat --skip_headings"
+	  ssh pdadm@zqxusn3tc07 -C "basestat --json --name=kanal"
+	  ssh pdadm@zqxusn3tc08 -C "basestat --splunk"
+	  ssh pdadm@zqxusn1tc04 -C "basestat --csv --tomcat --skip_headings"
 
 	  basestat.sh tomcat-test-server
 	  basestat.sh tomcat-utv-server
@@ -85,13 +85,13 @@ Distribute
 Scripts
 -------
 
-	  suvpasdrift01:/home/weblogic/bin/basestat.sh
-	  suvpasdrift01:/home/weblogic/bin/basestat_splunk.sh
+	  zqxpasdrift01:/home/weblogic/bin/basestat.sh
+	  zqxpasdrift01:/home/weblogic/bin/basestat_splunk.sh
 
 Cron
 ----
 
-	  ssh suvpasdrift01
+	  ssh zqxpasdrift01
 	  su - weblogic
 
 	  crontab -l

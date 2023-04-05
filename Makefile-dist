@@ -8,9 +8,9 @@ WLS_TEST=`exainfo -role weblogic-basestat-test-server`
 WLS_PROD=`exainfo -role weblogic-basestat-prod-server`
 WLS_PROD_PDADM=`exainfo -role weblogic-basestat-pdadm-prod-server`
 WLS_UTV=`exainfo -role weblogic-utv-server`
-TVEGLOGGEN=suvtvegloggen01 suvtvegloggen02 suvtvegloggen03 suvtvegloggen04
-PVEGLOGGEN=suvpvegloggen01 suvpvegloggen02 suvpvegloggen03 suvpvegloggen04
-KVEGLOGGEN=suvpveglkurs01 suvpveglkurs02
+TVEGLOGGEN=zqxtvegloggen01 zqxtvegloggen02 zqxtvegloggen03 zqxtvegloggen04
+PVEGLOGGEN=zqxpvegloggen01 zqxpvegloggen02 zqxpvegloggen03 zqxpvegloggen04
+KVEGLOGGEN=zqxpveglkurs01 zqxpveglkurs02
 
 TOMCAT=`exainfo -role tomcat-server`
 

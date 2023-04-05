@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
   <!DOCTYPE server-xml [
-  <!ENTITY datasource1-include SYSTEM "suvint/datasource1-include.xml">
-  <!ENTITY context1-include SYSTEM "suvconf/context1-include.xml">
+  <!ENTITY datasource1-include SYSTEM "zqxint/datasource1-include.xml">
+  <!ENTITY context1-include SYSTEM "zqxconf/context1-include.xml">
 ]>
 
 <!--
@@ -50,7 +50,7 @@
               type="org.apache.catalina.UserDatabase"
               description="User database that can be updated and saved"
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
-              pathname="conf/suvint/tomcat-users.xml" />
+              pathname="conf/zqxint/tomcat-users.xml" />
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share

@@ -47,13 +47,13 @@
   </jta>
   <server>
     <name>server-nortraf-01</name>
-    <machine>machine-suvujapp02</machine>
+    <machine>machine-zqxujapp02</machine>
     <listen-port>7170</listen-port>
     <cluster>cluster-nortraf-01</cluster>
     <listen-address></listen-address>
     <server-start>
-      <class-path>/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/nortraf/suv-conf</class-path>
-      <arguments>-Djava.security.auth.login.config=/data/nortraf/suv-conf/jaas.config -XX:PermSize=128M -XX:MaxPermSize=256M -ms1280M -mx1280M -Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=n</arguments>
+      <class-path>/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/nortraf/zqx-conf</class-path>
+      <arguments>-Djava.security.auth.login.config=/data/nortraf/zqx-conf/jaas.config -XX:PermSize=128M -XX:MaxPermSize=256M -ms1280M -mx1280M -Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=n</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nortraf-01</name>
@@ -86,13 +86,13 @@
       <domain-log-broadcaster-buffer-size>10</domain-log-broadcaster-buffer-size>
       <server-logging-bridge-use-parent-loggers-enabled>false</server-logging-bridge-use-parent-loggers-enabled>
     </log>
-    <machine>machine-suvujapp03</machine>
+    <machine>machine-zqxujapp03</machine>
     <listen-port>7170</listen-port>
     <cluster>cluster-nortraf-01</cluster>
     <listen-address></listen-address>
     <server-start>
-      <class-path>/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/nortraf/suv-conf</class-path>
-      <arguments>-Djava.security.auth.login.config=/data/nortraf/suv-conf/jaas.config -XX:PermSize=128M -XX:MaxPermSize=256M -ms1280M -mx1280M -Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=n</arguments>
+      <class-path>/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/nortraf/zqx-conf</class-path>
+      <arguments>-Djava.security.auth.login.config=/data/nortraf/zqx-conf/jaas.config -XX:PermSize=128M -XX:MaxPermSize=256M -ms1280M -mx1280M -Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u02/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=n</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-nortraf-02</name>
@@ -164,31 +164,31 @@
     <security-dd-model>DDOnly</security-dd-model>
   </app-deployment>
   <machine>
-    <name>machine-suvujapp02</name>
+    <name>machine-zqxujapp02</name>
     <node-manager>
-      <name>machine-suvujapp02</name>
+      <name>machine-zqxujapp02</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp02.somesite.no</listen-address>
+      <listen-address>zqxujapp02.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp03</name>
+    <name>machine-zqxujapp03</name>
     <node-manager>
-      <name>machine-suvujapp03</name>
+      <name>machine-zqxujapp03</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp03.somesite.no</listen-address>
+      <listen-address>zqxujapp03.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp11</name>
+    <name>machine-zqxujapp11</name>
     <node-manager>
-      <name>machine-suvujapp11</name>
+      <name>machine-zqxujapp11</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp11.somesite.no</listen-address>
+      <listen-address>zqxujapp11.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>

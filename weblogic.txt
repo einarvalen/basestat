@@ -19,14 +19,14 @@ Basestat for weblogic
 -Dwlw.logErrorsToConsole=false 
 -Dweblogic.ext.dirs=/opt/Oracle/Middleware/patch_wls1034/profiles/default/sysext_manifest_classpath:/opt/Oracle/Middleware/patch_ocp360/profiles/default/sysext_manifest_classpath weblogic.Server
 
-suvujapp01:/opt/Oracle/Middleware/user_projects/domains/domain-oko-u01/config> config.xml <server> 
+zqxujapp01:/opt/Oracle/Middleware/user_projects/domains/domain-oko-u01/config> config.xml <server> 
 
 <name>server-ehf-01</name>
-<machine>machine-suvujapp06</machine>
+<machine>machine-zqxujapp06</machine>
 listen-port>7140</listen-port>
     <cluster>cluster-ehf-01</cluster>
 
 
-http://suvpasdrift01.somesite.no:16000/maria/baseinfo/search.json?basename=+base-dateximport-01&hostname=suvutomcat05%
+http://zqxpasdrift01.somesite.no:16000/maria/baseinfo/search.json?basename=+base-dateximport-01&hostname=zqxutomcat05%
 
 /usr/local/plattform/sadm/bin/basestat --json --name 

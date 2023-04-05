@@ -6,13 +6,13 @@
     <name>domain-obiee-u01</name>
     <realm>
       <sec:authentication-provider xsi:type="wls:iplanet-authenticatorType">
-        <sec:name>suv-sk-ldap</sec:name>
+        <sec:name>zqx-sk-ldap</sec:name>
         <sec:control-flag>SUFFICIENT</sec:control-flag>
         <wls:host>ldap.utv.somesite.no</wls:host>
         <wls:principal>uid=obiee,ou=serviceaccounts,dc=somesite,dc=no</wls:principal>
         <wls:user-base-dn>ou=internal,dc=somesite,dc=no</wls:user-base-dn>
         <wls:credential-encrypted>{AES}PtWzMF+YfFl5ejvop3VW4ByDqMZbDBcN0FT17xAfbbQ=</wls:credential-encrypted>
-        <wls:group-base-dn>ou=suvrolegroups,ou=groups,dc=somesite,dc=no</wls:group-base-dn>
+        <wls:group-base-dn>ou=zqxrolegroups,ou=groups,dc=somesite,dc=no</wls:group-base-dn>
         <wls:connect-timeout>90</wls:connect-timeout>
       </sec:authentication-provider>
       <sec:authentication-provider xsi:type="wls:default-authenticatorType">
@@ -52,7 +52,7 @@
       <hostname-verification-ignored>true</hostname-verification-ignored>
       <listen-port>7002</listen-port>
     </ssl>
-    <machine>suvujapp28</machine>
+    <machine>zqxujapp28</machine>
     <listen-port>17001</listen-port>
     <listen-address></listen-address>
     <server-diagnostic-config>
@@ -72,10 +72,10 @@
       <listen-port>19804</listen-port>
       <two-way-ssl-enabled>false</two-way-ssl-enabled>
     </ssl>
-    <machine>suvujapp28</machine>
+    <machine>zqxujapp28</machine>
     <listen-port>19704</listen-port>
     <cluster>bi_cluster</cluster>
-    <listen-address>suvujapp28-fip1.somesite.no</listen-address>
+    <listen-address>zqxujapp28-fip1.somesite.no</listen-address>
     <xml-registry xsi:nil="true"></xml-registry>
     <xml-entity-cache xsi:nil="true"></xml-entity-cache>
     <server-start>
@@ -113,10 +113,10 @@
       <listen-port>19804</listen-port>
       <two-way-ssl-enabled>false</two-way-ssl-enabled>
     </ssl>
-    <machine>suvujapp29</machine>
+    <machine>zqxujapp29</machine>
     <listen-port>19704</listen-port>
     <cluster>bi_cluster</cluster>
-    <listen-address>suvujapp29-fip1.somesite.no</listen-address>
+    <listen-address>zqxujapp29-fip1.somesite.no</listen-address>
     <xml-registry xsi:nil="true"></xml-registry>
     <xml-entity-cache xsi:nil="true"></xml-entity-cache>
     <server-start>
@@ -341,7 +341,7 @@
     <name>analyticsRes</name>
     <target>bi_cluster</target>
     <module-type>war</module-type>
-    <source-path>/data/obiee/suvprofil/analyticsRes</source-path>
+    <source-path>/data/obiee/zqxprofil/analyticsRes</source-path>
     <security-dd-model>DDOnly</security-dd-model>
     <staging-mode>nostage</staging-mode>
   </app-deployment>
@@ -718,18 +718,18 @@
     <staging-mode>nostage</staging-mode>
   </library>
   <machine xsi:type="unix-machineType">
-    <name>suvujapp28</name>
+    <name>zqxujapp28</name>
     <node-manager>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp28</listen-address>
+      <listen-address>zqxujapp28</listen-address>
       <listen-port>5562</listen-port>
     </node-manager>
   </machine>
   <machine xsi:type="unix-machineType">
-    <name>suvujapp29</name>
+    <name>zqxujapp29</name>
     <node-manager>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp29.somesite.no</listen-address>
+      <listen-address>zqxujapp29.somesite.no</listen-address>
       <listen-port>5562</listen-port>
     </node-manager>
   </machine>

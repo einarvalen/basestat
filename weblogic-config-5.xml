@@ -47,9 +47,9 @@
   </jta>
   <server>
     <name>AdminServer7024</name>
-    <machine>machine-suvujapp12</machine>
+    <machine>machine-zqxujapp12</machine>
     <listen-port>7024</listen-port>
-    <listen-address>suvujapp12</listen-address>
+    <listen-address>zqxujapp12</listen-address>
   </server>
   <server>
     <name>server-brutus-01</name>
@@ -66,7 +66,7 @@
       <use-server-certs>false</use-server-certs>
       <jsse-enabled>false</jsse-enabled>
     </ssl>
-    <machine>machine-suvujapp13</machine>
+    <machine>machine-zqxujapp13</machine>
     <listen-port>8600</listen-port>
     <cluster>cluster-brutus-01</cluster>
     <server-debug>
@@ -79,10 +79,10 @@
         <enabled>false</enabled>
       </debug-scope>
     </server-debug>
-    <listen-address>suvujapp13</listen-address>
+    <listen-address>zqxujapp13</listen-address>
     <server-start>
-      <class-path>/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/brutus/suv-conf/</class-path>
-      <arguments>-Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -XX:MaxPermSize=256m -Xms256m -Xmx2048m -Duser.country=no -Duser.language=no -Dlogback.configurationFile=/data/brutus/suv-conf/logback.xml -Dweblogic.security.SSL.nojce=true</arguments>
+      <class-path>/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/brutus/zqx-conf/</class-path>
+      <arguments>-Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -XX:MaxPermSize=256m -Xms256m -Xmx2048m -Duser.country=no -Duser.language=no -Dlogback.configurationFile=/data/brutus/zqx-conf/logback.xml -Dweblogic.security.SSL.nojce=true</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-brutus-01</name>
@@ -97,15 +97,15 @@
       <enabled>false</enabled>
       <listen-port>22</listen-port>
     </ssl>
-    <machine>machine-suvujapp14</machine>
+    <machine>machine-zqxujapp14</machine>
     <listen-port>8600</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <cluster>cluster-brutus-01</cluster>
-    <listen-address>suvujapp14</listen-address>
+    <listen-address>zqxujapp14</listen-address>
     <java-compiler>javac</java-compiler>
     <server-start>
-      <class-path>/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/brutus/suv-conf/</class-path>
-      <arguments>-Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -XX:MaxPermSize=256m -Xms256m -Xmx2048m -Duser.country=no -Duser.language=no -Dlogback.configurationFile=/data/brutus/suv-conf/logback.xml -Dweblogic.security.SSL.nojce=true</arguments>
+      <class-path>/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/Agent_001/config:/data/brutus/zqx-conf/</class-path>
+      <arguments>-Djava.util.logging.config.file=/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/config/OpenSSOAgentLogConfig.properties -DLOG_COMPATMODE=Off -XX:MaxPermSize=256m -Xms256m -Xmx2048m -Duser.country=no -Duser.language=no -Dlogback.configurationFile=/data/brutus/zqx-conf/logback.xml -Dweblogic.security.SSL.nojce=true</arguments>
     </server-start>
     <jta-migratable-target>
       <name>server-brutus-02</name>
@@ -122,11 +122,11 @@
     <ssl>
       <enabled>false</enabled>
     </ssl>
-    <machine>machine-suvujapp15</machine>
+    <machine>machine-zqxujapp15</machine>
     <listen-port>7360</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <cluster>cluster-rapweb-01</cluster>
-    <listen-address>suvujapp15.somesite.no</listen-address>
+    <listen-address>zqxujapp15.somesite.no</listen-address>
     <administration-port>9002</administration-port>
     <java-compiler>javac</java-compiler>
     <server-start>
@@ -150,11 +150,11 @@
     <ssl>
       <enabled>false</enabled>
     </ssl>
-    <machine>machine-suvujapp16</machine>
+    <machine>machine-zqxujapp16</machine>
     <listen-port>7360</listen-port>
     <listen-port-enabled>true</listen-port-enabled>
     <cluster>cluster-rapweb-01</cluster>
-    <listen-address>suvujapp16.somesite.no</listen-address>
+    <listen-address>zqxujapp16.somesite.no</listen-address>
     <java-compiler>javac</java-compiler>
     <server-start>
       <class-path>/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/agent.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/lib/openssoclientsdk.jar:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/locale:/opt/OpenSSO/domain-tmt-u03/j2ee_agents/weblogic_v10_agent/Agent_001/config</class-path>
@@ -215,49 +215,49 @@
     <security-dd-model>DDOnly</security-dd-model>
   </app-deployment>
   <machine>
-    <name>machine-suvujapp12</name>
+    <name>machine-zqxujapp12</name>
     <node-manager>
-      <name>machine-suvujapp12</name>
+      <name>machine-zqxujapp12</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp12</listen-address>
+      <listen-address>zqxujapp12</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp13</name>
+    <name>machine-zqxujapp13</name>
     <node-manager>
-      <name>machine-suvujapp13</name>
+      <name>machine-zqxujapp13</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp13</listen-address>
+      <listen-address>zqxujapp13</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp14</name>
+    <name>machine-zqxujapp14</name>
     <node-manager>
-      <name>machine-suvujapp14</name>
+      <name>machine-zqxujapp14</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp14</listen-address>
+      <listen-address>zqxujapp14</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp15</name>
+    <name>machine-zqxujapp15</name>
     <node-manager>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp15.somesite.no</listen-address>
+      <listen-address>zqxujapp15.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp16</name>
+    <name>machine-zqxujapp16</name>
     <node-manager>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp16.somesite.no</listen-address>
+      <listen-address>zqxujapp16.somesite.no</listen-address>
       <listen-port>5556</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>

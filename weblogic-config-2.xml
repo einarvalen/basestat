@@ -29,16 +29,16 @@
   </security-configuration>
   <server>
     <name>AdminServer7027</name>
-    <machine>machine-suvujapp20</machine>
+    <machine>machine-zqxujapp20</machine>
     <listen-port>7027</listen-port>
     <listen-address></listen-address>
   </server>
   <server>
     <name>server-vegloggen-01</name>
-    <machine>machine-suvujapp21</machine>
+    <machine>machine-zqxujapp21</machine>
     <listen-port>7560</listen-port>
     <cluster>cluster-vegloggen-01</cluster>
-    <listen-address>suvujapp21</listen-address>
+    <listen-address>zqxujapp21</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegloggen/</arguments>
@@ -51,10 +51,10 @@
   </server>
   <server>
     <name>server-vegloggen-02</name>
-    <machine>machine-suvujapp22</machine>
+    <machine>machine-zqxujapp22</machine>
     <listen-port>7560</listen-port>
     <cluster>cluster-vegloggen-01</cluster>
-    <listen-address>suvujapp22</listen-address>
+    <listen-address>zqxujapp22</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegloggen/</arguments>
@@ -67,10 +67,10 @@
   </server>
   <server>
     <name>server-nvmsloc-01</name>
-    <machine>machine-suvujapp21</machine>
+    <machine>machine-zqxujapp21</machine>
     <listen-port>7470</listen-port>
     <cluster>cluster-nvmsloc-01</cluster>
-    <listen-address>suvujapp21</listen-address>
+    <listen-address>zqxujapp21</listen-address>
     <server-start>
       <class-path>/data/nvms/properties/</class-path>
       <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/lokasjon/</arguments>
@@ -83,10 +83,10 @@
   </server>
   <server>
     <name>server-nvmsloc-02</name>
-    <machine>machine-suvujapp22</machine>
+    <machine>machine-zqxujapp22</machine>
     <listen-port>7470</listen-port>
     <cluster>cluster-nvmsloc-01</cluster>
-    <listen-address>suvujapp22</listen-address>
+    <listen-address>zqxujapp22</listen-address>
     <server-start>
       <class-path>/data/nvms/properties/</class-path>
       <arguments>-Xms4g -Xmx4g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/lokasjon/</arguments>
@@ -99,12 +99,12 @@
   </server>
   <server>
     <name>server-nvmsroute-01</name>
-    <machine>machine-suvujapp21</machine>
+    <machine>machine-zqxujapp21</machine>
     <listen-port>7480</listen-port>
     <cluster>cluster-nvmsroute-01</cluster>
-    <listen-address>suvujapp21</listen-address>
+    <listen-address>zqxujapp21</listen-address>
     <server-start>
-      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=suvdev -Dschema=active</arguments>
+      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=zqxdev -Dschema=active</arguments>
       <username>weblogic</username>
       <password-encrypted>{AES}z9mExhyLHY/m7vHQ7bMF5Lszb4ghF+WfwhufhyiwzEg=</password-encrypted>
     </server-start>
@@ -116,12 +116,12 @@
   </server>
   <server>
     <name>server-nvmsroute-02</name>
-    <machine>machine-suvujapp22</machine>
+    <machine>machine-zqxujapp22</machine>
     <listen-port>7480</listen-port>
     <cluster>cluster-nvmsroute-01</cluster>
-    <listen-address>suvujapp22</listen-address>
+    <listen-address>zqxujapp22</listen-address>
     <server-start>
-      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=suvdev -Dschema=active</arguments>
+      <arguments>-Xms1548m -Xmx1548m -Doverride=file:///data/nvmskart/vegloggen-rute.properties -Dnvms.loc.prop=zqxdev -Dschema=active</arguments>
       <username>weblogic</username>
       <password-encrypted>{AES}/0doZK3cMbQro7RG81buoTT4+h6j3c3rLbS7H+hNPu4=</password-encrypted>
     </server-start>
@@ -140,10 +140,10 @@
       <two-way-ssl-enabled>false</two-way-ssl-enabled>
       <jsse-enabled>false</jsse-enabled>
     </ssl>
-    <machine>machine-suvujapp21</machine>
+    <machine>machine-zqxujapp21</machine>
     <listen-port>7490</listen-port>
     <cluster>cluster-vegloggenkart-01</cluster>
-    <listen-address>suvujapp21</listen-address>
+    <listen-address>zqxujapp21</listen-address>
     <server-start>
       <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/vegloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
       <username>weblogic</username>
@@ -164,10 +164,10 @@
       <two-way-ssl-enabled>false</two-way-ssl-enabled>
       <jsse-enabled>false</jsse-enabled>
     </ssl>
-    <machine>machine-suvujapp22</machine>
+    <machine>machine-zqxujapp22</machine>
     <listen-port>7490</listen-port>
     <cluster>cluster-vegloggenkart-01</cluster>
-    <listen-address>suvujapp22</listen-address>
+    <listen-address>zqxujapp22</listen-address>
     <server-start>
       <arguments>-Xms2g -Xmx2g -Doverride=file:///data/nvmskart/vegloggen-kart.properties -DGEOSERVER_DATA_DIR=/data/nvmskart/geoserver_data -Djava.awt.headless=true</arguments>
       <username>weblogic</username>
@@ -181,10 +181,10 @@
   </server>
   <server>
     <name>server-nvmsstatistikk-01</name>
-    <machine>machine-suvujapp23</machine>
+    <machine>machine-zqxujapp23</machine>
     <listen-port>7530</listen-port>
     <cluster>cluster-nvmsstatistikk-01</cluster>
-    <listen-address>suvujapp23</listen-address>
+    <listen-address>zqxujapp23</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/statistikk/</arguments>
@@ -197,10 +197,10 @@
   </server>
   <server>
     <name>server-nvmsstatistikk-02</name>
-    <machine>machine-suvujapp24</machine>
+    <machine>machine-zqxujapp24</machine>
     <listen-port>7530</listen-port>
     <cluster>cluster-nvmsstatistikk-01</cluster>
-    <listen-address>suvujapp24</listen-address>
+    <listen-address>zqxujapp24</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms512m -Xmx512m -Dnvms.kernel=SUVDev -Djava.awt.headless=true -Djavamelody.storage-directory=/data/vegloggen/monitoring/statistikk/</arguments>
@@ -213,16 +213,16 @@
   </server>
   <server>
     <name>server-vegmelding-01</name>
-    <machine>machine-suvujapp23</machine>
+    <machine>machine-zqxujapp23</machine>
     <listen-port>7540</listen-port>
     <cluster>cluster-vegmelding-01</cluster>
     <web-server>
       <web-server-log>
-        <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(suvguid)</elf-fields>
+        <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(zqxguid)</elf-fields>
         <log-file-format>extended</log-file-format>
       </web-server-log>
     </web-server>
-    <listen-address>suvujapp23</listen-address>
+    <listen-address>zqxujapp23</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegmelding/</arguments>
@@ -235,16 +235,16 @@
   </server>
   <server>
     <name>server-vegmelding-02</name>
-    <machine>machine-suvujapp24</machine>
+    <machine>machine-zqxujapp24</machine>
     <listen-port>7540</listen-port>
     <cluster>cluster-vegmelding-01</cluster>
     <web-server>
       <web-server-log>
-        <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(suvguid)</elf-fields>
+        <elf-fields>date time cs-method cs-uri sc-status cs(X-Forwarded-For) cs(zqxguid)</elf-fields>
         <log-file-format>extended</log-file-format>
       </web-server-log>
     </web-server>
-    <listen-address>suvujapp24</listen-address>
+    <listen-address>zqxujapp24</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms2g -Xmx2g -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/vegmelding/</arguments>
@@ -257,10 +257,10 @@
   </server>
   <server>
     <name>server-nvmsdatex-01</name>
-    <machine>machine-suvujapp23</machine>
+    <machine>machine-zqxujapp23</machine>
     <listen-port>7550</listen-port>
     <cluster>cluster-nvmsdatex-01</cluster>
-    <listen-address>suvujapp23</listen-address>
+    <listen-address>zqxujapp23</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/datex/</arguments>
@@ -273,10 +273,10 @@
   </server>
   <server>
     <name>server-nvmsdatex-02</name>
-    <machine>machine-suvujapp24</machine>
+    <machine>machine-zqxujapp24</machine>
     <listen-port>7550</listen-port>
     <cluster>cluster-nvmsdatex-01</cluster>
-    <listen-address>suvujapp24</listen-address>
+    <listen-address>zqxujapp24</listen-address>
     <server-start>
       <class-path>/data/nvms/properties</class-path>
       <arguments>-Xms1548m -Xmx1548m -Dnvms.kernel=SUVDev -Djavamelody.storage-directory=/data/vegloggen/monitoring/datex/</arguments>
@@ -384,51 +384,51 @@
     <cache-in-app-directory>false</cache-in-app-directory>
   </app-deployment>
   <machine>
-    <name>machine-suvujapp20</name>
+    <name>machine-zqxujapp20</name>
     <node-manager>
-      <name>machine-suvujapp20</name>
+      <name>machine-zqxujapp20</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp20.somesite.no</listen-address>
+      <listen-address>zqxujapp20.somesite.no</listen-address>
       <listen-port>5568</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp21</name>
+    <name>machine-zqxujapp21</name>
     <node-manager>
-      <name>machine-suvujapp21</name>
+      <name>machine-zqxujapp21</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp21.somesite.no</listen-address>
+      <listen-address>zqxujapp21.somesite.no</listen-address>
       <listen-port>5568</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp22</name>
+    <name>machine-zqxujapp22</name>
     <node-manager>
-      <name>machine-suvujapp22</name>
+      <name>machine-zqxujapp22</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp22.somesite.no</listen-address>
+      <listen-address>zqxujapp22.somesite.no</listen-address>
       <listen-port>5568</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp23</name>
+    <name>machine-zqxujapp23</name>
     <node-manager>
-      <name>machine-suvujapp23</name>
+      <name>machine-zqxujapp23</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp23.somesite.no</listen-address>
+      <listen-address>zqxujapp23.somesite.no</listen-address>
       <listen-port>5568</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>
   </machine>
   <machine>
-    <name>machine-suvujapp24</name>
+    <name>machine-zqxujapp24</name>
     <node-manager>
-      <name>machine-suvujapp24</name>
+      <name>machine-zqxujapp24</name>
       <nm-type>Plain</nm-type>
-      <listen-address>suvujapp24.somesite.no</listen-address>
+      <listen-address>zqxujapp24.somesite.no</listen-address>
       <listen-port>5568</listen-port>
       <debug-enabled>false</debug-enabled>
     </node-manager>

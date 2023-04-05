@@ -67,13 +67,13 @@ bool discoverJavaCryptographicExtension( string javaHome ) {
 
 string dirName(string project, string cluster,string basename) {
 	auto writer = appender!string();
-	formattedWrite(writer, "/opt/suv/%s/%s/%s/", strip(project), strip(cluster), strip(basename));
+	formattedWrite(writer, "/opt/zqx/%s/%s/%s/", strip(project), strip(cluster), strip(basename));
 	return writer.data;
 }
 
 unittest {
-	assert( dirName("ikt","tc-ikt-u01", "base-soabaseldap-01") == "/opt/suv/ikt/tc-ikt-u01/base-soabaseldap-01/");
-	assert( dirName(" ikt","tc-ikt-u01 ", " base-soabaseldap-01 ") == "/opt/suv/ikt/tc-ikt-u01/base-soabaseldap-01/");
+	assert( dirName("ikt","tc-ikt-u01", "base-soabaseldap-01") == "/opt/zqx/ikt/tc-ikt-u01/base-soabaseldap-01/");
+	assert( dirName(" ikt","tc-ikt-u01 ", " base-soabaseldap-01 ") == "/opt/zqx/ikt/tc-ikt-u01/base-soabaseldap-01/");
 }
 
 
